@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja de Games - Login</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    
+    <!-- CSS Local -->
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header>
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">
+                    <img src="img/logo.png" alt="Logo da Loja">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Promoções</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Console</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Jogos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="login.html">Login</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="O que deseja buscar?" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Buscar</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="container">
+        
+        <!-- Seção de Login -->
+        <section id="section-login" class="row justify-content-center">
+            <div class="col-12 col-md-6 col-lg-4 border p-4 rounded shadow-sm bg-light">
+                <h1 class="h3 mb-3 fw-normal text-center">Login</h1>
+                <form>
+                    <div class="mb-3">
+                        <label for="usuario" class="form-label">Usuário</label>
+                        <input type="text" class="form-control" name="usuario" id="usuario" placeholder="Digite seu usuário" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="senha" class="form-label">Senha</label>
+                        <input type="password" class="form-control" name="senha" id="senha" placeholder="Digite sua senha" required>
+                    </div>
+                    <div class="d-grid gap-2">
+                        <input type="button" value="Entrar" class="btn btn-primary" id="bt-login" onclick="login()">
+                    </div>
+                </form>
+
+                <div id="botao-cadastrar" class="text-center mt-4">
+                    <button type="button" class="btn btn-info text-white">Não é cadastrado ainda? Cadastre-se</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Cadastro (animada via Jquery) -->
+        <section id="section-cadastro" class="row justify-content-center mt-4">
+            <div id="form-cadastrar" class="col-12 col-md-6 border p-4 rounded shadow-sm bg-light">
+                <h2 class="h4 mb-3 text-center">Novo Cadastro</h2>
+                <form>
+                    <div class="mb-3 text-start">
+                        <label for="cad-nome" class="form-label">Nome Completo</label>
+                        <input type="text" class="form-control" id="cad-nome" placeholder="Seu nome" required>
+                    </div>
+                    <div class="mb-3 text-start">
+                        <label for="cad-email" class="form-label">E-mail</label>
+                        <input type="email" class="form-control" id="cad-email" placeholder="nome@exemplo.com" required>
+                    </div>
+                    <div class="mb-3 text-start">
+                        <label for="cad-senha" class="form-label">Senha</label>
+                        <input type="password" class="form-control" id="cad-senha" placeholder="Crie uma senha" required>
+                    </div>
+                    <div class="d-grid gap-2">
+                        <input type="button" value="Cadastrar" class="btn btn-primary" id="bt-cadastrar" onclick="cadastro()">
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Botão Voltar ao Topo -->
+        <button id="voltar-topo" type="button" class="btn btn-outline-primary" onclick="topo()">↑ Voltar ao topo</button>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="mt-5">
+        <p>© 2026 Loja de Games - Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Scripts (Bootstrap, jQuery e Script Local) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
